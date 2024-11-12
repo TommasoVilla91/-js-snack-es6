@@ -91,13 +91,34 @@ for (let i = 0; i < clubTeams.length; i++) {
 console.log(namesId, recFoulsId)
 
 // fondere i due array
-function fusion(namesArray, foulsArray) {
+const fusion = (namesArray, foulsArray) => {
     const namesAndFouls = [];
     for (let i = 0; i < namesArray.length; i++) {
-        const curNames = namesArray[i];
-        const curFouls = foulsArray[i];
-        namesAndFouls.push(curNames, curFouls);
+        namesAndFouls.push(namesArray[i], foulsArray[i])
     }
-    return namesAndFouls;
+    return namesAndFouls
 }
+
+// function fusion(namesArray, foulsArray) {
+//     const namesAndFouls = [];
+//     for (let i = 0; i < namesArray.length; i++) {
+//         const curNames = namesArray[i];
+//         const curFouls = foulsArray[i];
+//         namesAndFouls.push(curNames, curFouls);
+//     }
+//     return namesAndFouls;
+// }
 console.log(fusion(namesId, recFoulsId));
+
+
+// Snack 3 (Bonus)
+// Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+// La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri. 
+// Non usare i metodi di array di JS
+
+function mimmo(array, a, b) {
+    const resultArray = [];
+    for (let i = a; i <= b; i++) {
+        
+    }
+}
