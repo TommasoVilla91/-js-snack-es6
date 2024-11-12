@@ -74,10 +74,10 @@ const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + 
 for (let i = 0; i < clubTeams.length; i++) {
     const team = clubTeams[i];
 
-    scoreElem = getRandomInt(0, 115);
-    foulsElem = getRandomInt(0, 50);
+    team.score = getRandomInt(0, 115);
+    team.recFouls = getRandomInt(0, 50);
 
-    console.log(`punteggio: ${scoreElem}, falli subiti: ${foulsElem}`);
+    console.log(`punteggio: ${team.score}, falli subiti: ${team.recFouls}`);
 }
 
 // creare array di nomi e array di falli subiti
@@ -91,3 +91,13 @@ for (let i = 0; i < clubTeams.length; i++) {
 console.log(namesId, recFoulsId)
 
 // fondere i due array
+function fusion(namesArray, foulsArray) {
+    const namesAndFouls = [];
+    for (let i = 0; i < namesArray.length; i++) {
+        const curNames = namesArray[i];
+        const curFouls = foulsArray[i];
+        namesAndFouls.push(curNames, curFouls);
+    }
+    return namesAndFouls;
+}
+console.log(fusion(namesId, recFoulsId));
