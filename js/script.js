@@ -85,9 +85,8 @@ let namesId = [];
 let recFoulsId = [];
 for (let i = 0; i < clubTeams.length; i++) {
     const team = clubTeams[i];
-
-    namesId = team.name;
-    recFoulsId = team.recFouls;
+    namesId.push(team.name);
+    recFoulsId.push(team.recFouls);
 }
 console.log(namesId, recFoulsId)
 
