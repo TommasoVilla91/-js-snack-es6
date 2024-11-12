@@ -70,21 +70,25 @@ const clubTeams = [
 // arrow function per generare numeri random
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
-// associare funzione a variabili punteggi e falli
-const numScore = getRandomInt(0, 115);
-const numFouls = getRandomInt(0, 50);
-
-// ciclo for per estrarre valori attuali di puntegi e falli
-let scoreElem = "";
-let foulsElem = "";
+// ciclo for per associare funzione a variabili punteggi e falli
 for (let i = 0; i < clubTeams.length; i++) {
-    const scoreItem = clubTeams[i];
-    const foulsItem = clubTeams[i];
+    const team = clubTeams[i];
 
-    scoreElem = scoreItem.score;
-    foulsElem = foulsItem.recFouls;
+    scoreElem = getRandomInt(0, 115);
+    foulsElem = getRandomInt(0, 50);
 
-    console.log(scoreElem, foulsElem);
+    console.log(`punteggio: ${scoreElem}, falli subiti: ${foulsElem}`);
 }
 
-// associare i numeri random alla chiavi di punteggi e falli
+// creare array di nomi e array di falli subiti
+let namesId = [];
+let recFoulsId = [];
+for (let i = 0; i < clubTeams.length; i++) {
+    const team = clubTeams[i];
+
+    namesId = team.name;
+    recFoulsId = team.recFouls;
+}
+console.log(namesId, recFoulsId)
+
+// fondere i due array
